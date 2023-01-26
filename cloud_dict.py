@@ -7,8 +7,8 @@ import unicodedata
 from sys import exit
 from PIL import Image
 
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
+#from fuzzywuzzy import fuzz
+#from fuzzywuzzy import process
 
 from gspread_pandas import Spread,Client
 from google.oauth2 import service_account
@@ -31,13 +31,8 @@ scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
 
 #credentials for running online streamlit
-#'''credentials = service_account.Credentials.from_service_account_info(
-#                st.secrets["gcp_service_account"], scopes = scope)'''
-
-#credentials for building local streamlit
-service_account_file = 'keys.json'
-credentials = service_account.Credentials.from_service_account_file(
-                service_account_file, scopes = scope)
+credentials = service_account.Credentials.from_service_account_info(
+                st.secrets["gcp_service_account"], scopes = scope)
 
 client = Client(scope=scope,creds=credentials)
 spreadsheetname = "Dicionarios"
@@ -45,7 +40,7 @@ spread = Spread(spreadsheetname,client = client)
 
 
 
-#call para abrir a imagem da loft na página
+#call para abrir a imagem da Cappra na página
 foto = Image.open('cappra-branco.png')
 st.image(foto, width=300)
 st.markdown("""<hr style="height:4px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
