@@ -6,6 +6,8 @@ import pandas as pd
 import unicodedata
 from sys import exit
 from PIL import Image
+from streamlit_searchbox import st_searchbox
+from typing import List
 
 #from fuzzywuzzy import fuzz
 #from fuzzywuzzy import process
@@ -93,8 +95,8 @@ if ws_choice == "Navegar pelo catálogo de termos e definições":
         else:
             st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
         st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-else:
-    with st.form('search form', clear_on_submit=True):
+elif ws_choice == "Sugerir novos termos ou tags":
+    with st.form('add form', clear_on_submit=True):
         terms_or_tags = st.radio('O que deseja sugerir?', ('novo termo', 'nova tag'))
         consulta = st.text_input('insira a palavra com letras minúsculas e sem acentos, depois aperte o botão [Enviar]', value='')
         submitted = st.form_submit_button("Enviar")
@@ -121,3 +123,8 @@ else:
 
             #st.write(df2)
             id = df2.loc[consulta][-1]
+else:
+    with st.form('search form', clear_on_submit=True):
+
+        search = autocomplete(st, 'Digite aqui', to_list(df.Termo), key=None, default=None) 
+
