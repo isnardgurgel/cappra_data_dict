@@ -126,5 +126,8 @@ elif ws_choice == "Sugerir novos termos ou tags":
 else:
     with st.form('search form', clear_on_submit=True):
 
-        search = autocomplete(st, 'Digite aqui', to_list(df.Termo), key=None, default=None) 
+        search = st.text_input("Digite aqui a sua busca, depois clique em 'Procurar'")
+        sub_2 = st.form_submit_button("Procurar")
+        if sub_2:
+            st.write('Estamos consultando o termo:', search) 
 
