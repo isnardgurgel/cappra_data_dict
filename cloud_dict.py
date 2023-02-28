@@ -135,5 +135,6 @@ else:
         df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
         st.write(search_low)
         for index, row in df_2.iterrows():
-            st.title(row['Termo'],': ')
-            st.subheader(row['Descrição'])
+            if row['Termo'].lower() == search_low:
+                st.title(row['Termo'],': ')
+                st.subheader(row['Descrição'])
