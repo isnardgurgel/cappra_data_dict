@@ -134,10 +134,10 @@ else:
         if sub_2:
             st.write('Estamos consultando o termo:', search)
             df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
+            siba = search
         
         
-    if df_2 !="":
-        st.write('dfg')
+        st.write(siba)
 
             
 
