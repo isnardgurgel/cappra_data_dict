@@ -133,10 +133,7 @@ else:
             st.write('Estamos consultando o termo:', search)
             df = DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
         
-    if df=="":
-        pass
-        
-    elif:
+    if df!="":
         st.dataframe(df)
             
 
