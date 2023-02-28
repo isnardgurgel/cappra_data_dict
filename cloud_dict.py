@@ -135,6 +135,6 @@ else:
             st.write('Estamos consultando o termo:', search)
             df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
         
-        st.write(df_2)
+    st.write(df_2)
             
 
