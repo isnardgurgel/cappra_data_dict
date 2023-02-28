@@ -131,6 +131,6 @@ else:
     
     if sub_2:
         st.write('Estamos consultando o termo:', search)
-        search_low = lower(search)
+        search_low = lower(str(search))
         df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
         st.write(search_low)
