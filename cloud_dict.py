@@ -133,8 +133,14 @@ else:
         st.write('Estamos consultando o termo:', search)
         search_low = (search.lower())
         df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
-        st.write(search_low)
         for index, row in df_2.iterrows():
             if row['Termo'].lower() == search_low:
                 st.title(row['Termo'],': ')
                 st.subheader(row['Descrição'])
+                if row['Tag_2'] == "":
+                    st.write('<', row['Tag'], '>')
+                elif row['Tag_2'] != "":
+                    st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
+                else:
+                    st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
+                st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
