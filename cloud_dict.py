@@ -148,7 +148,7 @@ else:
                 else:
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-            elif row['Tag'].lower() == search_low or row['Tag_2'] == search_low or row['Tag_3'] == search_low:
+            elif row['Tag'].lower() == search_low:
                 st.title(row['Termo'],': ')
                 st.subheader(row['Descrição'])
                 if row['Tag_2'] == "":
@@ -158,5 +158,15 @@ else:
                 else:
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+            elif row['Tag_2'].lower() == search_low:
+                st.title(row['Termo'],': ')
+                st.subheader(row['Descrição'])
+                if row['Tag_2'] == "":
+                    st.write('<', row['Tag'], '>')
+                elif row['Tag_2'] != "":
+                    st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
+                else:
+                    st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
+                st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)    
             
 
