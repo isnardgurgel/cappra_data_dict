@@ -133,10 +133,7 @@ else:
         if sub_2:
             st.write('Estamos consultando o termo:', search)
             df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
-            if search in tolist(df_2.Termo):
-                siba = f'Temos o termo {search}'
-                st.write(siba)
-        
+            st.write(tolist(df_2.Termo)) 
         
     
 
