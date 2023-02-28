@@ -89,12 +89,12 @@ if ws_choice == "Navegar pelo catálogo de termos e definições":
     for index, row in df.iterrows():
         st.title(row['Termo'],': ')
         st.subheader(row['Descrição'])
-        if row['Tag_2'] == "":
-            st.write('<', row['Tag'], '>')
+        if row['Tag_3'] != "":
+            st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
         elif row['Tag_2'] != "":
             st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
-        elif row['Tag_3'] != "":
-            st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
+        elif row['Tag_2'] == "":
+            st.write('<', row['Tag'], '>')
         st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 elif ws_choice == "Sugerir novos termos ou tags":
     with st.form('add form', clear_on_submit=True):
