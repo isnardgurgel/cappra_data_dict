@@ -124,8 +124,6 @@ elif ws_choice == "Sugerir novos termos ou tags":
             #st.write(df2)
             id = df2.loc[consulta][-1]
 else:
-    df_2= ""
-    siba= ""
     with st.form('search form', clear_on_submit=True):
         
 
