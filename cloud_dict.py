@@ -124,11 +124,13 @@ elif ws_choice == "Sugerir novos termos ou tags":
             #st.write(df2)
             id = df2.loc[consulta][-1]
 else:
+    df_2= ""
     with st.form('search form', clear_on_submit=True):
+        
 
         search = st.text_input("Digite aqui a sua busca, depois clique em 'Procurar'")
         sub_2 = st.form_submit_button("Procurar")
-        df_2= ""
+        
         if sub_2:
             st.write('Estamos consultando o termo:', search)
             df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
