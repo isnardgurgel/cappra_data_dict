@@ -134,7 +134,7 @@ else:
         st.write('Estamos consultando o termo:', search)
         search_low = (search.lower())
         if search_low == 'ai':
-            st.write('vamos buscar pelo termo IA')
+            st.write('Melhores resultados com o termo IA')
             search_low = 'ia'
         df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
         for index, row in df_2.iterrows():
