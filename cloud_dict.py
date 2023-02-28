@@ -136,7 +136,7 @@ else:
     if df=="":
         pass
         
-    else:
+    elif:
         st.dataframe(df)
             
 
