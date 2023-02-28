@@ -134,6 +134,6 @@ else:
             df = DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
         
     if df!="":
-        st.dataframe(df)
+        st.write(df)
             
 
