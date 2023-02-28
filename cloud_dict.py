@@ -133,6 +133,7 @@ else:
             df = DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
         
     if sub_2=="":
+        pass
         
     else:
         st.dataframe(df)
