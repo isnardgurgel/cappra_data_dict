@@ -84,7 +84,7 @@ ws_choice = st.radio('O que você deseja fazer?',what_sheets)
 
 st.markdown("""<hr style="height:4px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 if ws_choice == "Navegar pelo catálogo de termos e definições":
-    df = DataFrame(sh.worksheet('Edição - 1').get_all_records())
+    df = DataFrame(sh.worksheet('Edição - 1').get_all_records()).sort_values(by'Termo')
     #sheets = ws_choice
     for index, row in df.iterrows():
         st.title(row['Termo'],': ')
