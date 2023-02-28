@@ -183,7 +183,7 @@ else:
                 elif row['Tag_2'] == "":
                     st.write('<', row['Tag'], '>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
-        if lista_vazia =="":
-            st.write('termo não encontrado')    
+            elif lista_vazia =="":
+                st.write('termo não encontrado')    
             
 
