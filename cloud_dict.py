@@ -135,7 +135,6 @@ else:
             st.write('Estamos consultando o termo:', search)
             df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
         
-        if df_2!="":
             st.write(df_2)
             
 
