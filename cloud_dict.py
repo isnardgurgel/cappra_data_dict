@@ -93,7 +93,7 @@ if ws_choice == "Navegar pelo catálogo de termos e definições":
             st.write('<', row['Tag'], '>')
         elif row['Tag_2'] != "":
             st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
-        else:
+        elif row['Tag_3'] != "":
             st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
         st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 elif ws_choice == "Sugerir novos termos ou tags":
@@ -145,7 +145,7 @@ else:
                     st.write('<', row['Tag'], '>')
                 elif row['Tag_2'] != "":
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
-                else:
+                elif row['Tag_3'] != "":
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
             elif row['Tag'].lower() == search_low:
@@ -155,7 +155,7 @@ else:
                     st.write('<', row['Tag'], '>')
                 elif row['Tag_2'] != "":
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
-                else:
+                elif row['Tag_3'] != "":
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
             elif row['Tag_2'].lower() == search_low:
@@ -165,7 +165,7 @@ else:
                     st.write('<', row['Tag'], '>')
                 elif row['Tag_2'] != "":
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
-                else:
+                elif row['Tag_3'] != "":
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
             elif row['Tag_3'].lower() == search_low:
@@ -175,7 +175,7 @@ else:
                     st.write('<', row['Tag'], '>')
                 elif row['Tag_2'] != "":
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
-                else:
+                elif row['Tag_3'] != "":
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)    
             
