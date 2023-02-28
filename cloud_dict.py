@@ -136,9 +136,11 @@ else:
         if search_low == 'ai':
             st.write('Melhores resultados com o termo IA')
             search_low = 'ia'
+        lista_vazia = []
         df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()).sort_values(by='Termo')
         for index, row in df_2.iterrows():
             if row['Termo'].lower() == search_low:
+                lista_vazia += search_low
                 st.title(row['Termo'],': ')
                 st.subheader(row['Descrição'])
                 if row['Tag_3'] != "":
@@ -149,6 +151,7 @@ else:
                     st.write('<', row['Tag'], '>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
             elif row['Tag'].lower() == search_low:
+                lista_vazia += search_low
                 st.title(row['Termo'],': ')
                 st.subheader(row['Descrição'])
                 if row['Tag_3'] != "":
@@ -159,6 +162,7 @@ else:
                     st.write('<', row['Tag'], '>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
             elif row['Tag_2'].lower() == search_low:
+                lista_vazia += search_low
                 st.title(row['Termo'],': ')
                 st.subheader(row['Descrição'])
                 if row['Tag_3'] != "":
@@ -169,6 +173,7 @@ else:
                     st.write('<', row['Tag'], '>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
             elif row['Tag_3'].lower() == search_low:
+                lista_vazia += search_low
                 st.title(row['Termo'],': ')
                 st.subheader(row['Descrição'])
                 if row['Tag_3'] != "":
@@ -177,7 +182,8 @@ else:
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
                 elif row['Tag_2'] == "":
                     st.write('<', row['Tag'], '>')
-                st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)    
-            else:
-                st.write('termo não encontrado')
+                st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+        if lista_vazia =="":
+            st.write('termo não encontrado')    
+            
 
