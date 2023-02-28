@@ -176,7 +176,7 @@ else:
                 elif row['Tag_2'] != "":
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>')
                 elif row['Tag_3'] != "":
-                    st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
+                    st.write('<', row['Tag'],'>', ' <', row['Tag_2'], '>', ' <', row['Tag_3'], '>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)    
             
 
