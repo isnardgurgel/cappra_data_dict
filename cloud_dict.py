@@ -132,13 +132,15 @@ else:
         
         if sub_2:
             st.write('Estamos consultando o termo:', search)
-            df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
-            st.write(df_2)
-            st.write(lower(search)
-            for ind, row in df_2.iterrows():
-                if lower(row['Termo']) == lower(search):
-                    st.title(row['Termo'],': ')
-                    st.subheader(row['Descrição'])
+    
+    if sub_2:
+        df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
+        st.write(df_2)
+        st.write(lower(search)
+        for index, row in df_2.iterrows():
+            if lower(row['Termo']) == lower(search):
+                st.title(row['Termo'],': ')
+                st.subheader(row['Descrição'])
                 
 
         
