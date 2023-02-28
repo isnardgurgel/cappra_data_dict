@@ -184,6 +184,6 @@ else:
                     st.write('<', row['Tag'], '>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
         if len(lista_vazia) ==0:
-            st.subheader('Termo não encontrado')    
+            st.subheader('Termo não encontrado. Verifique a ortografia ou consulte o catálogo.')    
             
 
