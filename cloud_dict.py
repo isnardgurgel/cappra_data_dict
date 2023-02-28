@@ -73,8 +73,9 @@ st.markdown(f"<h5 style='text-align: left; color: darkgray;'> >> O dicionário d
 # Check whether the sheets exists
 what_sheets = worksheet_names()
 what_sheets[0] = "Navegar pelo catálogo de termos e definições"
-what_sheets[1] = "Sugerir novos termos ou tags (em breve)"
 what_sheets.append( "Consultar termos específicos")
+what_sheets[1] = "Sugerir novos termos ou tags (em breve)"
+
 
 
 #st.sidebar.write(what_sheets)
