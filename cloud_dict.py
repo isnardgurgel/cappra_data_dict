@@ -158,4 +158,6 @@ else:
                 else:
                     st.write('<', row['Tag'],'>', ' <',row['Tag_2'], '>', ' <', row['Tag_3'],'>')
                 st.markdown("""<hr style="height:3px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+            else:
+                st.subheader("Resultado não encontrado")
 
