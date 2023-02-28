@@ -128,12 +128,10 @@ else:
         
 
         search = st.text_input("Digite aqui a sua busca, depois clique em 'Procurar'")
-        sub_2 = st.form_submit_button("Procurar")
-        
-        if sub_2:
-            st.write('Estamos consultando o termo:', search)
+        sub_2 = st.form_submit_button("Procurar")        
     
     if sub_2:
+        st.write('Estamos consultando o termo:', search)
         df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
         st.write(df_2)
         st.write(lower(search)       
