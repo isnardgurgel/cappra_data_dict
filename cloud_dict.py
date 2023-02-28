@@ -134,6 +134,8 @@ else:
         if sub_2:
             st.write('Estamos consultando o termo:', search)
             df_2= DataFrame(sh.worksheet('Edição - 1').get_all_records()) 
+        else:
+            pass
         
     if search in tolist(df_2.Termo):
         st.write('temos')
